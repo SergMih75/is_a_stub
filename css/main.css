@@ -1,14 +1,131 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-.main {
+.wrapper {
     width: 100vw;
     height: 100vh;
 
     position: relative;
+    z-index: 1;
 
-    background-color: #0A0A0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+	background-color: #0a0a0a;
 }
+
+.main {
+	width: calc(100vw - 26px);
+	height: calc(100vh - 26px);
+
+	position: relative;
+	z-index: 2;
+
+	background-color: #0a0a0a;
+    /* border: 3px solid #00000000; */
+
+	overflow: hidden;
+}
+
+.main-border-top {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -148px;
+    left: -148px;
+    z-index: -1;
+    background-color: #00F0FF;
+    animation: topRun 3000ms ease infinite;
+    -webkit-animation: topRun 3000ms ease infinite;
+}
+
+.later {
+    top: -150px;
+    left: -150px;
+
+    animation-delay: 1000ms;
+}
+
+.to-later {
+    animation-delay: 2000ms;
+}
+
+@keyframes topRun {
+    25% {
+        top: -148px;
+        left: calc(100% - 2px);
+    }
+    50% {
+        left: calc(100% - 2px);
+        top: calc(100% - 2px);
+    }
+    75% {
+        top: calc(100% - 2px);
+        left: -148px;
+    }
+    100% {
+        top: -148px;
+        left: -148px;
+    }
+}
+/* 
+@-moz-keyframes topRun {
+    25% {
+        top: -148px;
+        left: calc(100% - 2px);
+    }
+    50% {
+        left: calc(100% - 2px);
+        top: calc(100% - 2px);
+    }
+    75% {
+        top: calc(100% - 2px);
+        left: -148px;
+    }
+    100% {
+        top: -148px;
+        left: -148px;
+    }
+}
+
+@-webkit-keyframes topRun {
+    25% {
+        top: -148px;
+        left: calc(100% - 2px);
+    }
+    50% {
+        left: calc(100% - 2px);
+        top: calc(100% - 2px);
+    }
+    75% {
+        top: calc(100% - 2px);
+        left: -148px;
+    }
+    100% {
+        top: -148px;
+        left: -148px;
+    }
+}
+
+@-o-keyframes topRun {
+    25% {
+        top: -148px;
+        left: calc(100% - 2px);
+    }
+    50% {
+        left: calc(100% - 2px);
+        top: calc(100% - 2px);
+    }
+    75% {
+        top: calc(100% - 2px);
+        left: -148px;
+    }
+    100% {
+        top: -148px;
+        left: -148px;
+    }
+} */
