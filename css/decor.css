@@ -177,3 +177,69 @@
         opacity: 0.1;
     }
 }
+
+.battery-left,
+.battery-right {
+    position: absolute;
+    top: 238.58px;
+
+}
+
+.battery-left {
+    left: 630px;
+}
+
+.battery-right {
+    left: 1039.95px;
+}
+
+.battery-one {
+    animation: batteryChargeOne 3000ms linear infinite;
+    -webkit-animation: batteryChargeOne 3000ms linear infinite;
+}
+
+@keyframes batteryChargeOne {
+    33% {
+        opacity: 0.01;
+    }
+    33.01% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.battery-two {
+    animation: batteryChargeTwo 3000ms linear infinite;
+    -webkit-animation: batteryChargeTwo 3000ms linear infinite;
+}
+
+@keyframes batteryChargeTwo {
+    66% {
+        opacity: 0.01;
+    }
+    66.01% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.battery-three {
+    animation: batteryChargeThree 3000ms linear infinite;
+    -webkit-animation: batteryChargeThree 3000ms linear infinite;
+}
+
+@keyframes batteryChargeThree {
+    85% {
+        opacity: 0.01;
+    }
+    85.01% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
